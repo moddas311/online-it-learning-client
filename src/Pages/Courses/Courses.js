@@ -2,7 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Topic from './Topic/Topic';
 
-const Home = () => {
+const Courses = () => {
 
     const allTopics = useLoaderData()
 
@@ -23,4 +23,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Courses;
