@@ -1,18 +1,18 @@
 import React from 'react';
-import { Button, Card, CardGroup, Col, Row } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const Topic = ({ topic }) => {
     const { img, name, description } = topic
     return (
-        <div class="col">
-            <div class="card h-100">
-                <img src={img} class="w-100 h-100 card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title text-primary">{name}</h5>
-                    <p class="card-text">{description}</p>
+        <div className="col">
+            <div className="card h-100">
+                <img src={img} className="w-100 h-100 card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title text-primary">{name}</h5>
+                    <p className="card-text">{description}</p>
                 </div>
                 <div>
-                    <Button variant="outline-secondary">Secondary</Button>{' '}
+                    <Button variant="outline-secondary">Secondary</Button>
                 </div>
             </div>
         </div>
