@@ -1,8 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
+import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { BsJournalBookmarkFill } from 'react-icons/bs';
 
 const Header = () => {
 
@@ -22,9 +24,9 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg  text-white bg-primary">
             <div className="container-fluid">
                 <Link className="navbar-brand" to='/'>
-                    <img src="../../../assets/images.png" alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
+                    <BsJournalBookmarkFill />
                 </Link>
-                <Link className="navbar-brand" to='/'>IT Learning</Link>
+                <Link className="navbar-brand" to='/'>Online IT Learning</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -41,10 +43,33 @@ const Header = () => {
                         </li>
 
                     </ul>
-                    <div className='p-8'>
-                        <Link className="btn btn-primary mr-2" to='login'>Login</Link>
-                        <Link className="btn btn-primary" to='register'>Registration</Link>
-                    </div>
+
+                    <Link to="/profile">
+                        {user?.photoURL ?
+                            <Image
+                                style={{ height: '40px' }}
+                                roundedCircle
+                                src={user?.photoURL}></Image>
+                            :
+                            <FaUser />
+                        }
+                    </Link>
+
+                    <>
+                        {
+                            user?.uid ?
+                                <>
+                                    <span>{user?.displayName}</span>
+                                    <Button className='btn btn-primary' onClick={handleLogOut}>LogOut</Button>
+                                </>
+                                :
+                                <>
+                                    <Link className="btn btn-primary mr-2" to='login'>Login</Link>
+                                    <Link className="btn btn-primary" to='register'>Registration</Link>
+                                </>
+                        }
+                    </>
+
                 </div>
             </div>
         </nav>

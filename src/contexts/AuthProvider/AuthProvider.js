@@ -28,7 +28,7 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, profile);
     }
 
-    const verifyEmail = () =>{
+    const verifyEmail = () => {
         return sendEmailVerification(auth.currentUser);
     }
 
@@ -39,9 +39,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            console.log('inside auth state change', currentUser);
-
-            if(currentUser === null || currentUser.emailVerified){
+            if (currentUser === null || currentUser.emailVerified) {
                 setUser(currentUser);
             }
             setLoading(false);
@@ -53,16 +51,16 @@ const AuthProvider = ({ children }) => {
 
     }, [])
 
-    const authInfo = { 
-        user, 
-        loading, 
+    const authInfo = {
+        user,
+        loading,
         setLoading,
-        providerLogin, 
-        logOut, 
+        providerLogin,
+        logOut,
         updateUserProfile,
         verifyEmail,
-        createUser, 
-        signIn 
+        createUser,
+        signIn
     };
 
     return (
