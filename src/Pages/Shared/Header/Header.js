@@ -4,7 +4,7 @@ import { Button, Image } from 'react-bootstrap';
 import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
-import { BsJournalBookmarkFill } from 'react-icons/bs';
+import logo from '../../../assets/logo/it-logo.png';
 
 const Header = () => {
 
@@ -24,7 +24,7 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg  text-white bg-primary">
             <div className="container-fluid">
                 <Link className="navbar-brand" to='/'>
-                    <BsJournalBookmarkFill />
+                    <Image style={{ height: '40px' }} src={logo}></Image>
                 </Link>
                 <Link className="navbar-brand" to='/'>Online IT Learning</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@ const Header = () => {
                                 roundedCircle
                                 src={user?.photoURL}></Image>
                             :
-                            <FaUser />
+                            <FaUser className='bg-white'></FaUser>
                         }
                     </Link>
 

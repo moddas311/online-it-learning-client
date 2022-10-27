@@ -11,9 +11,6 @@ const Topic = ({ topic }) => {
                     <h5 className="card-title text-primary">{name}</h5>
                     <p className="card-text">{description}</p>
                 </div>
-                <div className='pb-2 text-center'>
-                    <Button variant="outline-secondary">Secondary</Button>
-                </div>
             </div>
         </div>
     );
