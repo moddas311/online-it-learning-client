@@ -19,7 +19,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Courses />,
-                loader: () => fetch('http://localhost:5000/learning-categories')
+                loader: () => fetch('https://assignment-10-server-side-nine.vercel.app/learning-categories')
             },
             {
                 path: '/faq',
@@ -40,12 +40,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/category/:id',
                 element: <CourseDetails />,
-                loader: ({ params }) => fetch(`http://localhost:5000/learning-categories/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-side-nine.vercel.app/learning-categories/${params.id}`)
             },
             {
                 path: '/category/:id/premium',
                 element: <PrivateRoute><Premium /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/learning-categories/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-server-side-nine.vercel.app/learning-categories/${params.id}`)
             }
         ]
     }

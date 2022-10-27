@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Topic = ({ topic }) => {
-    const { img, name, price } = topic
+    const {id, img, name, price } = topic
     return (
         <div className="col">
             <div className="card h-100">
@@ -10,6 +11,11 @@ const Topic = ({ topic }) => {
                 <div className="card-body">
                     <h5 className="card-title text-primary">{name}</h5>
                     <p className="card-info"><small>Course Price: {price}</small></p>
+                </div>
+                <div className='text-center pb-3'>
+                    <Button variant="outline-secondary">
+                    <Link className='text-decoration-none' to={`category/${id}`}>Details</Link>
+                    </Button>
                 </div>
             </div>
         </div>
