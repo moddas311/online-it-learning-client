@@ -44,7 +44,7 @@ const Header = () => {
 
                     </ul>
 
-                    <Link to="/profile">
+                    <Link>
                         {user?.photoURL ?
                             <Image
                                 style={{ height: '40px' }}
