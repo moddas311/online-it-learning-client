@@ -7,7 +7,7 @@ import { FaGithub } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 
@@ -100,6 +100,8 @@ const Login = () => {
                 </>
             </Form>
             <hr className='border border-dark border-2 opacity-30' />
+
+            <Link className='text-decoration-none' to='/register'>Do not have account?</Link>
             <div className='text-center'>
                 <ButtonGroup vertical>
                     <Button onClick={handleGoogleSignIn} variant="outline-secondary" className='mb-2 rounded'><FaGoogle /> Login with Google</Button>

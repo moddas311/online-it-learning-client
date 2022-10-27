@@ -12,7 +12,6 @@ const Premium = () => {
             <div className="card-body bg-info text-white">
                 <h5 className="text-warning">{name}</h5>
                 <p>{description}</p>
-
             </div>
         </div>
     );

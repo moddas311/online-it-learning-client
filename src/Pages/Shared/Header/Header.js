@@ -41,9 +41,9 @@ const Header = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to='/blog'>Blog</Link>
                         </li>
-
+                        <li>
+                        </li>
                     </ul>
-
                     <Link>
                         {user?.photoURL ?
                             <Image
