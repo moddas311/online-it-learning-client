@@ -62,6 +62,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate('/');
+                toast.success(`Welcome Back ${user.displayName}!`);
             })
             .catch(error => console.error(error));
     }
@@ -71,6 +73,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate('/');
+                toast.success(`Welcome Back ${user.displayName}!`);
             })
             .catch(error => console.error(error));
     }

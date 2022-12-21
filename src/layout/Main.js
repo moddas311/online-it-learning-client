@@ -5,6 +5,16 @@ import Header from '../Pages/Shared/Header/Header';
 import LeftSideNav from '../Pages/Shared/LeftSideNav/LeftSideNav';
 
 const Main = () => {
+
+
+    // if (loading) {
+    //     return <div className="d-flex justify-content-center">
+    //         <div className="spinner-border" role="status">
+    //             <span className="visually-hidden">Loading...</span>
+    //         </div>
+    //     </div>
+    // }
+
     return (
         <div>
             <Header />
